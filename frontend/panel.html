@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Panel - Organizador de Tareas</title>
+<link rel="stylesheet" href="panel.css">
+</head>
+<body>
+<div class="panel-container">
+    <header>
+        <h1>Organizador de Tareas</h1>
+    </header>
+
+    <section class="schedule-section">
+        <h2>Horario</h2>
+        <div id="dateContainer"></div>
+        <table id="scheduleTable">
+            <tr>
+                <th>Hora</th>
+                <th>Lunes</th>
+                <th>Martes</th>
+                <th>Miércoles</th>
+                <th>Jueves</th>
+                <th>Viernes</th>
+            </tr>
+            <tr><td>7:20-8:00</td><td contenteditable="true">Formación</td><td contenteditable="true">Instrucción</td><td contenteditable="true">Tutoría</td><td contenteditable="true">Plan lector</td><td contenteditable="true">Formación</td></tr>
+            <tr><td>8:00-8:40</td><td contenteditable="true">Curso</td><td contenteditable="true">Curso</td><td contenteditable="true">Curso</td><td contenteditable="true">Curso</td><td contenteditable="true">Curso</td></tr>
+            <tr><td>8:40-9:20</td><td contenteditable="true">Curso</td><td contenteditable="true">Curso</td><td contenteditable="true">Curso</td><td contenteditable="true">Curso</td><td contenteditable="true">Curso</td></tr>
+            <tr><td>9:20-10:00</td><td contenteditable="true">Curso</td><td contenteditable="true">Curso</td><td contenteditable="true">Curso</td><td contenteditable="true">Curso</td><td contenteditable="true">Curso</td></tr>
+            <tr><td>10:00-10:40</td><td contenteditable="true">Curso</td><td contenteditable="true">Curso</td><td contenteditable="true">Curso</td><td contenteditable="true">Curso</td><td contenteditable="true">Curso</td></tr>
+            <tr><td>10:40-11:10</td><td contenteditable="true">Recreo</td><td contenteditable="true">Recreo</td><td contenteditable="true">Recreo</td><td contenteditable="true">Recreo</td><td contenteditable="true">Recreo</td></tr>
+            <tr><td>11:10-11:50</td><td contenteditable="true">Curso / EduFinanciera</td><td contenteditable="true">Curso / Arte</td><td contenteditable="true">Curso / Plan lector</td><td contenteditable="true">Curso</td><td contenteditable="true">Curso</td></tr>
+            <tr><td>11:50-12:30</td><td contenteditable="true">Curso</td><td contenteditable="true">Curso</td><td contenteditable="true">Curso</td><td contenteditable="true">Curso</td><td contenteditable="true">Curso</td></tr>
+            <tr><td>12:30-1:10</td><td contenteditable="true">Curso</td><td contenteditable="true">Curso</td><td contenteditable="true">Curso</td><td contenteditable="true">Curso</td><td contenteditable="true">Curso</td></tr>
+            <tr><td>1:10-1:50</td><td contenteditable="true">Curso</td><td contenteditable="true">Curso</td><td contenteditable="true">Curso</td><td contenteditable="true">Curso</td><td contenteditable="true">Curso</td></tr>
+            <tr><td>1:50-2:30</td><td contenteditable="true">Curso / Plan lector</td><td contenteditable="true">Curso / Plan lector</td><td contenteditable="true">Curso / Plan lector</td><td contenteditable="true">Curso / Plan lector</td><td contenteditable="true">Curso / Plan lector</td></tr>
+        </table>
+    </section>
+
+    <section class="tasks-section">
+        <h2>Tareas y Eventos</h2>
+        <div class="task-form">
+            <select id="taskCourse"></select>
+            <select id="taskType">
+                <option value="">Selecciona tipo</option>
+                <option value="Tarea">Tarea</option>
+                <option value="Evento">Evento especial</option>
+            </select>
+            <input type="text" id="taskDescription" placeholder="Descripción">
+            <!-- Nuevo input para adjuntar archivo -->
+            <input type="file" id="taskFile" accept=".pdf,.xls,.xlsx,.doc,.docx,.png,.jpg,.jpeg" title="Adjuntar archivo">
+            <button id="addTaskBtn">Agregar</button>
+        </div>
+        <ul id="taskList"></ul>
+    </section>
+</div>
+
+<canvas id="bgCanvas"></canvas>
+<script src="panel.js"></script>
+</body>
+</html>

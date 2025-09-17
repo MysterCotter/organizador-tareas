@@ -1,0 +1,141 @@
+/* -------------------- Fondo animado con gradiente -------------------- */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(270deg, #121212, #1f1f1f, #121212);
+    background-size: 600% 600%;
+    color: #00ffe1; /* texto más vivo */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    animation: gradientBG 15s ease infinite;
+}
+
+@keyframes gradientBG {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* -------------------- Animación del contenedor al cargar -------------------- */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-30px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.container {
+    background: rgba(31, 31, 31, 0.95); 
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 0 30px rgba(0,255,255,0.6), 0 0 60px rgba(255,74,184,0.4);
+    width: 340px;
+    text-align: center;
+    animation: fadeIn 1s ease forwards;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Brillo sutil en el contenedor */
+.container::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(120deg, rgba(255,255,255,0.05), rgba(255,255,255,0) 70%);
+    transform: rotate(45deg);
+    animation: shine 3s linear infinite;
+}
+
+@keyframes shine {
+    0% { transform: rotate(45deg) translate(-200%, 0); }
+    100% { transform: rotate(45deg) translate(200%, 0); }
+}
+
+/* -------------------- Título -------------------- */
+h1 {
+    font-size: 2.2rem;
+    margin-bottom: 25px;
+    color: #00ffe1;
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0%, 100% { text-shadow: 0 0 10px #00ffe1; }
+    50% { text-shadow: 0 0 25px #00bfa5, 0 0 40px #ff4ab8; }
+}
+
+/* -------------------- Inputs y selects -------------------- */
+input, select, button {
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 12px 40px 12px 12px;
+    margin: 10px 0;
+    border-radius: 8px;
+    border: 2px solid #2c2c2c;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    color: #00ffe1;
+    background: rgba(30,30,50,0.85);
+    position: relative;
+}
+
+/* Check de confirmación al rellenar */
+input.valid, select.valid {
+    border-color: #00ff99;
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"><path fill="%2300ff99" d="M6 10.2L3.8 8l-1.4 1.4L6 13l8-8-1.4-1.4z"/></svg>');
+    background-repeat: no-repeat;
+    background-position: right 12px center;
+    background-size: 20px 20px;
+    animation: checkAppear 0.3s ease forwards;
+}
+
+@keyframes checkAppear {
+    0% { transform: scale(0.5); opacity: 0; }
+    100% { transform: scale(1); opacity: 1; }
+}
+
+input:focus, select:focus {
+    outline: 2px solid #00ff99;
+    background: #3a3a3a;
+    color: #00ffe1;
+}
+
+input::placeholder, select option {
+    color: #00bfa5;
+}
+
+/* -------------------- Botón -------------------- */
+button {
+    background: linear-gradient(135deg, #00ffe1, #ff4ab8);
+    color: #121212;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    background: linear-gradient(135deg, #ff4ab8, #00ffe1);
+    transform: scale(1.05);
+}
+
+/* -------------------- Enlaces -------------------- */
+a {
+    color: #00ffe1;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+a:hover {
+    text-decoration: underline;
+    color: #ffdd00;
+}
+
+/* -------------------- Texto de párrafo -------------------- */
+p {
+    font-size: 0.9rem;
+    color: #cfd8dc;
+}

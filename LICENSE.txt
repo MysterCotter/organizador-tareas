@@ -1,0 +1,8 @@
+Copyright (c) 2025 MysterCotter/ZackChess
+
+Todos los derechos reservados.
+
+Este software y sus archivos asociados (frontend y backend) están protegidos por derechos de autor. 
+No se permite la copia, modificación, distribución, uso comercial ni publicación de este código sin autorización expresa del autor.
+
+Cualquier uso no autorizado será considerado una infracción legal.

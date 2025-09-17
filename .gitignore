@@ -1,0 +1,9 @@
+# Archivos temporales de sistema
+.DS_Store
+Thumbs.db
+
+# Logs de errores o depuración
+*.log
+
+# Variables privadas de entorno (si luego usas base de datos o APIs)
+.env
